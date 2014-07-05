@@ -1,5 +1,5 @@
 {
-  "name": "node-admin-filter",
+  "name": "admin-filter",
   "version": "0.0.0",
   "description": "an object for the Admin filters",
   "main": "filter.js",
