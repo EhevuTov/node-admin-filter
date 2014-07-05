@@ -1,0 +1,160 @@
+
+//
+// IS41_Tekno_alacart_MJG LRE test 
+D0 01 00 00                                       // Size of filter 464 bytes
+
+// Filter Header Information
+49 53 34 31 5F 54 65 6B 6E 6F 5F 61 6C 61 63 61   // 004 Filter Name:
+72 74 5F 4D 4A 47 20 4C 52 45 20 74 65 73 74 00   //     IS41_Tekno_alacart_MJG LRE test
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00                           // 068 Start Time: Immediate
+FF FF FF FF FF FF FF FF                           // 076 End   Time: None
+FF FF FF FF    FF FF FF FF    00 00 00 00         // 084 No Cycles (Cycle On, Off, Max)
+57 24                                             // 096 Socket Number 9303
+00 00                                             // 098 Spare
+00 00                                             // 100 In-progress duration disabled
+00                                                // 102 Protocol Group: ANSI; Call Records (No MDRs or NDRs)
+06                                                // 103 Filter Version Six
+03                                                // 104 Protocol: sCCS
+00                                                // 105 Flags: None
+10 27                                             // 106 Max Passed Records 10000
+88 01 00 00                                       // 108 Correlate  offset 392
+C8 00 00 00                                       // 112 Format     offset 200
+00 00 00 00                                       // 116 ISUP chain offset   0
+00 00 00 00                                       // 120 TCAP chain offset   0
+A4 00 00 00                                       // 124 ANSI chain offset 164
+00 00 00 00                                       // 128 SNM  chain offset   0
+8C 01 00 00                                       // 132 Report     offset 396
+00 00 00 00                                       // 136 FTP (none) offset   0
+00 00 00 00                                       // 140 Hot Number offset   0
+00 00 00 00                                       // 144 Eng  chain offset   0
+00 00 00 00                                       // 148 AIN  chain offset   0
+00 00 00 00                                       // 152 GSM  chain offset   0
+00 00 00 00                                       // 156 Unkn chain offset   0
+00 00 00 00                                       // 160 Unkn chain offset   0
+
+// ISUP -- None
+
+// TCAP -- None
+
+// 164 ANSI-41 Filtration chain
+
+B3 00 00 00                                       // >> Criteria 179: SCCP Called Address Global Title
+01 00 00 00                                       // Number of Values: 1
+20 00 00 00                                       // Entry Length:     32 bytes
+0A 00 00 00                                       // Value Size:       10 bytes
+02 00                                             // Data Type:        DIGITS
+02 00                                             // Presence Check:   IGNORE
+05 38 31 36 33 32 35 30 34 38 36                  // EQUAL: 8163250486
+00                                                // Padding Bytes:    One
+FF FF FF FF                                       // End of ANSI-41 Criteria Chain
+
+// SNM -- None
+
+// AIN -- None
+
+// GSM -- None
+
+// 200 Engine Fields Filtration chain
+// No criteria - Chain not used
+
+// Output Format
+07 00                                             // Field 7     [Unit ID                            ]
+3B 02                                             // Format 59   [-> ASCII - Unit ID (7) + : + Messag] Size 12 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+B0 00                                             // Field 176   [Link TCAP Query                    ]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+B1 00                                             // Field 177   [Link TCAP Response                 ]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+9D 05                                             // Field 1437  [UTC Originating Timestamp          ]
+66 02                                             // Format 102  [-> Seconds dot milliseconds SSSSSSS] Size 14 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+D9 02                                             // Field 729   [Correlation Key                    ]
+15 05                                             // Format 21   [-> hex                             ] Size 0 Protocol 5
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+B0 00                                             // Field 176   [Link TCAP Query                    ]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+B1 00                                             // Field 177   [Link TCAP Response                 ]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+9E 05                                             // Field 1438  [UTC Responding Timestamp           ]
+66 02                                             // Format 102  [-> Seconds dot milliseconds SSSSSSS] Size 14 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+AC 00                                             // Field 172   [MTP Invoke DPC                     ]
+2A 02                                             // Format 42   [-> point code NET.CLU.MEM          ] Size 11 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+AD 00                                             // Field 173   [MTP Invoke OPC                     ]
+2A 02                                             // Format 42   [-> point code NET.CLU.MEM          ] Size 11 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+AE 00                                             // Field 174   [MTP Return DPC                     ]
+2A 02                                             // Format 42   [-> point code NET.CLU.MEM          ] Size 11 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+AF 00                                             // Field 175   [MTP Return OPC                     ]
+2A 02                                             // Format 42   [-> point code NET.CLU.MEM          ] Size 11 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+C1 01                                             // Field 449   [Disposition Code (ANSI-41)         ]
+04 02                                             // Format 4    [-> ASCII                           ] Size 3 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+CC 00                                             // Field 204   [TCAP Component Types               ]
+43 02                                             // Format 67   [-> ASCII                           ] Size 8 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+D3 00                                             // Field 211   [Operation Code Specifier (ANSI-41-E]
+04 02                                             // Format 4    [-> ASCII                           ] Size 3 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+C7 00                                             // Field 199   [Transaction ID Originating         ]
+13 02                                             // Format 19   [-> decimal leading zero            ] Size 10 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+C8 00                                             // Field 200   [Transaction ID Responding          ]
+13 02                                             // Format 19   [-> decimal leading zero            ] Size 10 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+64 01                                             // Field 356   [MIN_MobileIdentificationNumber_Mobi]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+91 11                                             // Field 4497  [IMSI_IMSI                          ]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+92 11                                             // Field 4498  [MSIMSI_MobileStationIMSI_MobileStat]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+93 11                                             // Field 4499  [MSMIN_MobileStationMIN_MobileStatio]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+9B 11                                             // Field 4507  [TRN_TemporaryReferenceNumber_Digits]
+01 02                                             // Format 1    [-> ASCII                           ] Size 0 Protocol 2
+01 00 2C 00                                       // Text        [Comma (,)                          ] Size  1 Text
+A2 05                                             // Field 1442  [Link Set                           ]
+04 02                                             // Format 4    [-> ASCII                           ] Size 3 Protocol 2
+02 00 02 00                                       // Text        [CR/LF (New Line)                   ] Size  2 Text...
+0D 0A 00 00 
+00 00 00 00                                       // -- End of Format --
+
+// Correlate Sets
+00 00 00 00                                       // Correlate Set  -- End --
+
+// Report Information
+44 00                                             // Size of report information: 68 bytes
+00 00                                             // Report Spares
+01 0A                                             // Disposition Report: Ascii, Frequency code: 10
+00 00                                             // Message Count Report: None
+00 00 00 00                                       // Minutes Use Report: None
+00 00                                             // Link Average Report: None
+00 00                                             // Link Peak Report: None
+00 00 00                                          // OPC-DPC IS41/TCAP/AIN Report: None by Counts
+00                                                // No Stats
+00 00 00 00                                       // Minutes of Use Access Code: 
+00 00                                             // OPC-DPC GSM Report: None
+00 00                                             // GSM Peg Count Report: None
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   // GSM Peg Count Application Name: ''
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   // GSM Peg Count Aggregation Name: ''
+00 00                                             // GSM Peg Count Aggregation Number: 0
+00 00                                             // Global Disp/Msg Cnt: None
+00 00                                             // Global Disp/Msg Cnt: Threshholds CC1: 0% TC1: 0%
+00 00                                             // Report Spares
+
+// FTP Information  --  None (obsolete)
+
+// Hot Number Information  --  None

@@ -1,0 +1,27 @@
+{
+  "name": "node-admin-filter",
+  "version": "0.0.0",
+  "description": "an object for the Admin filters",
+  "main": "filter.js",
+	"private": true,
+  "scripts": {
+    "test": "tap ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EhevuTov/node-admin-filter.git"
+  },
+  "keywords": [
+    "admin",
+    "stream",
+		"filter"
+  ],
+  "author": "James Gosnell",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/EhevuTov/node-admin-filter/issues"
+  },
+  "devDependencies": {
+    "tap": "~0.4.4"
+  }
+}
